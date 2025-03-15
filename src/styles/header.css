@@ -1,0 +1,74 @@
+/* 📌 ÜST MENÜ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* İçerikleri sola yaslar */
+    padding: 15px 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    flex-grow: 1;
+}
+
+/* 📌 NAVIGATION MENÜ */
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 0; /* Sol hizaya çek */
+   /* Menü genişleyerek sola kayar */
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #003366;
+}
+
+/* 📌 HAMBURGER MENÜ (Mobil İçin) */
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    margin-left: 20px;
+}
+
+/* 📌 RESPONSIVE TASARIM */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
